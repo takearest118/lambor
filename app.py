@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 from sanic import Sanic
 from sanic.response import json
@@ -9,7 +9,11 @@ app = Sanic()
 
 @app.route('/')
 async def test(request):
-	return json({'hello': 'Lamborghini'})
+	payload = {
+		'hello': 'Lamborghini',
+		'philip': 'kevin'
+	}
+	return json(payload)
 
 
 if __name__ == '__main__':
