@@ -42,7 +42,7 @@ async def auth_register(request):
 
 
 @app.route('/auth/login', methods=['PUT'])
-async def auth_register(request):
+async def auth_login(request):
 	if 'id' not in request.json or len(request.json['id']) == 0:
 		raise ServerError('Bad request', status_code=400)
 	if 'password' not in request.json or len(request.json['password']) == 0:
