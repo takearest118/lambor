@@ -63,4 +63,4 @@ async def auth_login(request):
 
 
 if __name__ == '__main__':
-	app.run(host=app.config.APP_HOSTNAME, port=app.config.APP_PORT, debug=app.config.DEBUG)
+	app.run(host=app.config.APP_HOSTNAME, port=app.config.APP_PORT, debug=app.config.DEBUG, auto_reload=app.config.AUTO_RELOAD)
